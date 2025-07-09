@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git url: 'your_repository_url', branch: 'your_branch'
+                git url: 'https://github.com/Hajaresab1992/task.git', branch: 'main'
             }
         }
         stage('Build') {
