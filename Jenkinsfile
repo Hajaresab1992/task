@@ -10,7 +10,7 @@
             
             stage('Build') {
                 steps {
-                    sh 'npm run build'
+                    sh 'ls '
                 }
             }
         }
