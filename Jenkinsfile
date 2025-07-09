@@ -13,6 +13,6 @@
                     sh 'mvn clean install'
                 }
             }
-        
+        }
     }
 }
