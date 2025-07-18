@@ -1,18 +1,21 @@
 
-    pipeline {
-    agent any
-    stages {
-        stage('Checkout') {
+pipeline {
+        
+     agent any
+        
+     tools{
+        maven "Maven-3.9.9"   
+     stages {
+        stage('Clone') {
             steps {
                 git "https://github.com/Hajaresab1992/task.git"
             }
         }
         stage('Build') {
             steps {
-                withMaven(maven: 'apache-maven-3.9.6-bin.tar.gz') {
-                    sh 'mvn clean install'
+                     sh 'mvn clean package'
                 }
             }
         }
     }
-}
+
